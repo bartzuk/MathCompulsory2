@@ -18,8 +18,8 @@ int main() {
 	Matrix mat2(3, 3);
 	//mat2.read(); //User input for matrix 2
 	int A2[3][3] = { {1, 0, 2},
-				    {-3, 4, 6},
-				    {-1, -2, 3} };
+					{-3, 4, 6},
+					{-1, -2, 3} };
 	mat2.fill(A2); //Predefined values for matrix 2
 	printf("Matrix 2: \n");
 	mat2.print();

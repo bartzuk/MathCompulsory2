@@ -16,7 +16,7 @@ Matrix::Matrix()
 
 Matrix::Matrix(int _m, int _n) : m(_m), n(_n)
 {
-	// Overload construcor, initalizes object to a custom _m x _n matrix
+	// Overload constructor, initalizes object to a custom _m x _n matrix
 	for (int i = 0; i < _m; i++) {
 		for (int j = 0; j < _n; j++) {
 			A[i][j] = 0;
@@ -39,6 +39,7 @@ void Matrix::read()
 
 void Matrix::fill(int Arr[3][3])
 {
+	// Fills the matrix with hardcoded values
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < n; j++) {
 			A[i][j] = Arr[i][j];
@@ -107,11 +108,11 @@ double Matrix::determinant()
 		return 0.0;
 	}
 
-	double determinantValue = 
+	double determinantValue =
 		A[0][0] * get2x2Determinant(A[1][1], A[1][2], A[2][1], A[2][2]) -
 		A[0][1] * get2x2Determinant(A[1][0], A[1][2], A[2][0], A[2][2]) +
 		A[0][2] * get2x2Determinant(A[1][0], A[1][1], A[2][0], A[2][1]);
-	
+
 	return determinantValue;
 }
 
